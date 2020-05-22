@@ -1,0 +1,10 @@
+{
+  "name": "typescript",
+  "version": "",
+  "scripts": {
+    "compile-typescript": "tsc"
+  },
+  "dependencies": {
+    "typescript": "^3.8.3"
+  }
+}
