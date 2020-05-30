@@ -2,9 +2,13 @@
   "name": "typescript",
   "version": "",
   "scripts": {
-    "compile-typescript": "tsc"
+    "ts": "tsc --watch",
+    "dev": "nodemon ./dist/types/interface"
   },
   "dependencies": {
     "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
