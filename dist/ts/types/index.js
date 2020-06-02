@@ -1,63 +1,51 @@
+"use strict";
 /* ---------------- Boolean ----------------- */
 /* ------------------------------------------ */
-let isOpen: boolean;
+var isOpen;
 isOpen = false;
-
-let message: string;
-message = `foo ${isOpen}`;
-
+var message;
+message = "foo " + isOpen;
 /* --- Number ~ int, float, hex, binary ~ --- */
 /* ------------------------------------------ */
-let total: number;
+var total;
 total = 0xff0;
-
 /* ------ Array ~ type and structure ~ ------ */
 /* ------------------------------------------ */
-let items: number[];
+var items;
 items = [1, 2, 3, 4, 5];
-
-let array: Array<number>; // generic
+var array; // generic
 array = [1, 2, 3, 4];
-
 /* ------------------ Tuple ----------------- */
 /* ------------------------------------------ */
-let title: [number, string];
+var title;
 title = [1, 'foo'];
-
 /* ------------------ Enum ------------------ */
 /* ------------------------------------------ */
-enum Colors {
-  white = '#FFFF',
-  black = '#000',
-}
-
+var Colors;
+(function (Colors) {
+    Colors["white"] = "#FFFF";
+    Colors["black"] = "#000";
+})(Colors || (Colors = {}));
 /* --------- Any ~ qualquer coisa ~ --------- */
 /* ------------------------------------------ */
-let random: any;
+var random;
 random = [1, 'foo', true];
-
 /* ----------------- Void ------------------- */
 /* ------------------------------------------ */
-function logger(): void {
-  console.log('foo');
+function logger() {
+    console.log('foo');
 }
-
-/* ---- Null | Undefined => type alias  ----- */
-/* ------------------------------------------ */
-type mars = number | string;
-
 /* ----------------- Never ------------------ */
 /* ------------------------------------------ */
-function error(): never {
-  throw new Error('error');
+function error() {
+    throw new Error('error');
 }
-
 /* ----------------- Object ----------------- */
 /* ------------------------------------------ */
-let cart: object;
+var cart;
 cart = {
-  planet: {
-    mars: 'red',
-    earth: 'blue',
-  },
+    planet: {
+        mars: 'red',
+        earth: 'blue',
+    },
 };
